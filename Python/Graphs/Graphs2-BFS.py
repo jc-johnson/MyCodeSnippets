@@ -1,6 +1,7 @@
 # Python3 Program to print BFS traversal 
 # from a given source vertex. BFS(int s) 
-# traverses vertices reachable from s. 
+# traverses vertices reachable from s.
+# https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/
 from collections import defaultdict 
 
 # This class represents a directed graph 
