@@ -19,11 +19,12 @@ class Node:
         node = self
         counter = 0
         while node != None:
-            print (node.val) #print current value
+            # print (node.val) #print current value
             counter += 1
             node = node.next # move to next node
-        print (counter)
+        print ("List length:", counter)
         return counter
+
 
     # print the nth node in a list 
     def printNthNode(self, nodeNumber):
@@ -33,6 +34,23 @@ class Node:
         for x in range(0, nodeNumber-1):
             node = node.next
         print (node.val)
+
+
+    def getListMiddle(self):
+        node = self
+        length = node.getListLength()
+        # if length is even just cut it in half
+        if (length % 2) == 0: 
+            middle = int(length/2)
+            print("Middle:", middle)
+            node.printNthNode(middle)
+            node.printNthNode(middle+1) 
+        else:
+            middle = length
+            middle += 1
+            middle = int(middle/2)
+            node.printNthNode(middle)
+                   
         
              
 def main():
@@ -41,13 +59,24 @@ def main():
         
     node1 = Node(12) 
     node2 = Node(99) 
-    node3 = Node(37) 
+    node3 = Node(37)
+    node4 = Node(66)
+    node5 = Node(27)
     node1.next = node2 # 12->99
     node2.next = node3 # 99->37
+    node3.next = node4
+    node4.next = node5
     # the entire linked list now looks like: 12->99->37
     # node1.traverse()
     # node1.getListLength()
-    node1.printNthNode(3)
+    # node1.printNthNode(3)
+    node1.getListMiddle()
+
+    # Rounded tests
+    '''decimal = 5/2
+    print("Decimal:", decimal)
+    rounded = round(decimal, )
+    print("Rounded:", rounded)'''
 
 if __name__ == "__main__":
     """ This is executed when run from the command line """
