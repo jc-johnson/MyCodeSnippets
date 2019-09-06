@@ -52,8 +52,7 @@ class Node:
             middle += 1
             middle = int(middle/2)
             node.printNthNode(middle)
-                   
-        
+
              
 def main():
     """ Main entry point of the app """
