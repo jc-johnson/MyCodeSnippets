@@ -170,7 +170,6 @@ def main():
     # Node.removeHead(node1)
     node = Node.removeHead(node1)
     Node.traverse(node)
-    '''
 
     # append test
     list1 = Node(2) 
@@ -192,6 +191,7 @@ def main():
     print("Appended List")
     Node.append(list1, list2)
     Node.traverse(list1)
+    '''
 
 if __name__ == "__main__":
     """ This is executed when run from the command line """
